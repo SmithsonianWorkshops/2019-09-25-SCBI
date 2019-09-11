@@ -2,20 +2,20 @@
 layout: workshop      # DON'T CHANGE THIS.
 carpentry: "dc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").  
                       # Be sure to update the Carpentry type in _config.yml as well.  
-venue: "Quarterly SI Data Carpentry: Summer 2019 Edition"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "1000 Jefferson Dr SW, Washington, DC 20560"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+venue: "Data Carpentry Workshop with R at Smithsonian Conservation Biology Institute"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Front Royal, VA"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 latlng: "38.888778, -77.025991"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "Aug 15-16, 2019"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "Sep 25-26, 2019"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 am - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2019-08-15      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2019-08-16        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Amanda Devine","Jen Hammock","Mirian Tsuchiya","Mike Trizna"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Carrie Craig","Jesse Johnston","Alex Robillard"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+startdate: 2019-09-25      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2019-09-26        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Jen Hammock","Mirian Tsuchiya","Mike Trizna","Luis Villanueva"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Valentine Herrmann"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["si-datascience@si.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite: 66217053991          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -190,10 +190,7 @@ This block includes the Eventbrite registration widget if
 are not using Eventbrite, or leave it in, since it will not be
 displayed if the 'eventbrite' field in the header is not set.
 {% endcomment %}
-<strong>This workshop has unfortunately sold out. You can join the Waitlist by clicking the "Join Waitlist" button below.<br/>
-You can also go to <a href='https://datascience.si.edu/carpentries' target='_blank'>https://datascience.si.edu/carpentries</a> 
-and click the "Sign up for the Carpentries-announce mailing list" button to be alerted when future Smithsonian Carpentries
-workshops are announced.</strong>
+<strong>Coming soon...</strong>
 {% if page.eventbrite %}
 <iframe
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
@@ -322,103 +319,61 @@ please preview your site before committing, and make sure to run
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>. <strong>We will  hold a special pre-workshop installation help session for registrants with installation issues.</strong>
 </p>
 
-<div id="python"> {% comment %} Start of 'Python' section. Remove the third paragraph if
-  the workshop will teach Python using something other than
-  the Jupyter notebook.
-  Details at https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility {% endcomment %}
-  <h3>Python</h3>
+<div id="r"> {% comment %} Start of 'R' section. {% endcomment %}
+  <h3>R</h3>
 
   <p>
-    <a href="https://python.org">Python</a> is a popular language for
-    research computing, and great for general-purpose programming as
-    well.  Installing all of its research packages individually can be
-    a bit difficult, so we recommend
-    <a href="https://www.anaconda.com/distribution/">Anaconda</a>,
-    an all-in-one installer.
-  </p>
-
-  <p>
-    Regardless of how you choose to install it,
-    <strong>please make sure you install Python version 3.x</strong>
-    (e.g., 3.6 is fine).
-  </p>
-
-  <p>
-    We will teach Python using the <a href="https://jupyter.org/">Jupyter notebook</a>,
-    a programming environment that runs in a web browser. For this to work you will need a reasonably
-    up-to-date browser. The current versions of the Chrome, Safari and
-    Firefox browsers are all
-    <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
-    (some older browsers, including Internet Explorer version 9
-    and below, are not).
+    <a href="https://www.r-project.org">R</a> is a programming language
+    that is especially powerful for data exploration, visualization, and
+    statistical analysis. To interact with R, we use
+    <a href="https://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div>
     <ul class="nav nav-tabs nav-justified" role="tablist">
-      <li role="presentation" class="active"><a data-os="windows" href="#python-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
-      <li role="presentation"><a data-os="macos" href="#python-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
-      <li role="presentation"><a data-os="linux" href="#python-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
+      <li role="presentation" class="active"><a data-os="windows" href="#rstats-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
+      <li role="presentation"><a data-os="macos" href="#rstats-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
+      <li role="presentation"><a data-os="linux" href="#rstats-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
     </ul>
 
     <div class="tab-content">
-      <article role="tabpanel" class="tab-pane active" id="python-windows">
-        <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video Tutorial</a>
-        <ol>
-          <li>Open <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a> with your web browser.</li>
-          <li>Download the Python 3 installer for Windows.</li>
-          <li>Install Python 3 using all of the defaults for installation <em>except</em> make sure to check <strong>Add Anaconda to my PATH environment variable</strong>.</li>
-        </ol>
+      <article role="tabpanel" class="tab-pane active" id="rstats-windows">
+        <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
+        <p>
+          Install R by downloading and running
+          <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
+          from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+          Also, please install the
+          <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+          Note that if you have separate user and admin accounts, you should run the 
+          installers as administrator (right-click on .exe file and select "Run as 
+          administrator" instead of double-clicking). Otherwise problems may occur later, 
+          for example when installing R packages.
+        </p>
       </article>
-      <article role="tabpanel" class="tab-pane active" id="python-macos">
-        <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video Tutorial</a>
-        <ol>
-          <li>Open <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/download/#macos</a> with your web browser.</li>
-          <li>Download the Python 3 installer for OS X.</li>
-          <li>Install Python 3 using all of the defaults for installation.</li>
-        </ol>
+      <article role="tabpanel" class="tab-pane active" id="rstats-macos">
+        <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
+        <p>
+          Install R by downloading and running
+          <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
+          from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+          Also, please install the
+          <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+        </p>
       </article>
-      <article role="tabpanel" class="tab-pane active" id="python-linux">
-        <ol>
-          <li>Open <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/download/#linux</a> with your web browser.</li>
-          <li>Download the Python 3 installer for Linux.<br>
-            (The installation requires using the shell. If you aren't
-            comfortable doing the installation yourself
-            stop here and request help at the workshop.)
-          </li>
-          <li>
-            Open a terminal window.
-          </li>
-          <li>
-            Type <pre>bash Anaconda3-</pre> and then press
-            <kbd>Tab</kbd>. The name of the file you just downloaded should
-            appear. If it does not, navigate to the folder where you
-            downloaded the file, for example with:
-            <pre>cd Downloads</pre>
-            Then, try again.
-          </li>
-          <li>
-            Press <kbd>Return</kbd>. You will follow the text-only prompts. To move through
-            the text, press <kbd>Spacebar</kbd>. Type <code>yes</code> and
-            press enter to approve the license. Press enter to approve the
-            default location for the files. Type <code>yes</code> and
-            press enter to prepend Anaconda to your <code>PATH</code>
-            (this makes the Anaconda distribution the default Python).
-          </li>
-          <li>
-            Close the terminal window.
-          </li>
-        </ol>
+      <article role="tabpanel" class="tab-pane active" id="rstats-linux">
+        <p>
+          You can download the binary files for your distribution
+          from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or
+          you can use your package manager (e.g. for Debian/Ubuntu
+          run <code>sudo apt-get install r-base</code> and for Fedora run
+          <code>sudo dnf install R</code>).  Also, please install the
+          <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+        </p>
       </article>
     </div>
   </div>
-  {% comment %}
-  <p>
-    Once you are done installing the software listed above,
-    please go to <a href="setup/index.html">this page</a>,
-    which has instructions on how to test that everything was installed correctly.
-  </p>
-  {% endcomment %}
-</div> {% comment %} End of 'Python' section. {% endcomment %}
+</div> {% comment %} End of 'R' section. {% endcomment %}
 
 <div id="sql"> {% comment %} Start of 'SQLite' section. {% endcomment %}
   <h3>SQLite</h3>
